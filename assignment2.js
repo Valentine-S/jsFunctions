@@ -24,6 +24,7 @@ Array.prototype.mySome = function(callback) {
         if(callback(this[i]) == true) {
             return true; 
         }
+    }
     return false; 
 }
 Array.protoype.myEvery = function(callback) {
@@ -40,4 +41,30 @@ Array.prototype.myReduce = function(callback, initialValue) {
         reduced = callback(reduced, this[i]); 
     }
     return reduced; 
+}
+
+Array.prototype.myIncludes = function(target){
+    for(let i = 0; i < this.length; i++){
+        if(this[i] == target){
+            return true;
+        }
+    }
+    return false;
+}
+
+//index of
+
+
+
+
+//push
+
+Array.prototype.myLastIndexOf = function(target){
+    let last = -1;
+    for(let i = 0; i < this.length; i++){
+        if(this[i] == target){
+            last = i;
+        }
+    }
+    return last;
 }
