@@ -68,3 +68,19 @@ Array.prototype.myLastIndexOf = function(target){
     }
     return last;
 }
+
+function grabKeys(object){
+    newArray = []
+    for (const property in object) {
+        newArray.push(property)
+      }
+    return newArray
+} 
+
+function grabValues(object){
+    newArray = []
+    for (const property in object) {
+        newArray.push(object[property])
+      }
+    return newArray
+}
